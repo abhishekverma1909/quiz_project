@@ -1,0 +1,12 @@
+{% extends 'testApp/base.html'%}
+{%block body_block %}
+<div class="container form" align='center'>
+  <h1>Login To Write Exam</h1>
+  <hr>
+  <form method="post">
+    {{form.as_p}}
+    {% csrf_token %}
+    <button type="submit" class="btn btn-primary btn-lg but ">Login <i class="fas fa-sign-in-alt"></i></button>
+  </form>
+</div>
+{% endblock%}

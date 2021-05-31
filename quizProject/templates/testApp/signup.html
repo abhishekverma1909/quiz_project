@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{%extends 'testApp/base.html'%}
+{% block body_block %}
+<div class="container form1" align='center'>
+  <h1>SignUp</h1>
+  <hr>
+  <form method="post">
+       {{form.as_p}}
+       {% csrf_token %}
+    <h3>Already a member? <a href="/accounts/login">Login</a> </h3>
+    <button type="submit" class="btn btn-primary btn-lg but ">Signup</button>
+  </form>
+</div>
+{%endblock%}

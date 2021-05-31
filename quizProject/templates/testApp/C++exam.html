@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% extends 'testApp/base.html'%}
+{%block body_block %}
+<p class="time">Exam Date and Time: {{time1}}</p>
+<div class="container">
+  <div class="exam">
+    <p>C++ Mock Test</p>
+  </div>
+
+  <div>
+    {% for i in  mcq %}
+
+         <div class="question">
+           <P class="text-primary">{{i.id}} ) {{i.question}} </p>
+         </div>
+
+        <div class="rb">
+            <input type = "radio" class="rb" name = {{i.id}} id="opt1" value="{{i.opt1}}">{{i.opt1}}<br>
+
+            <input type = "radio" class="rb" name = {{i.id}} id="opt2" value="{{i.opt2}}">{{i.opt2}}<br>
+
+            <input type = "radio" class="rb" name = {{i.id}} id="opt3" value="{{i.opt3}}">{{i.opt3}}<br>
+
+            <input type = "radio" class="rb" name = {{i.id}} id="opt4" value="{{i.opt4}}">{{i.opt4}}<br>
+        </div>
+            <label id="corans" class= "rb" style="display:none ; color : green"><b>Correct Answer: {{i.correct_ans}}</b></label><br><br>
+            <input type="submit" class="btn btn-success sub" value="Submit" id="b1">
+    {% endfor %}
+            <div id="finish">
+               <a href="/finish">Finish Test</a>
+           </div>
+    </div>
+</div>
+{% include 'testApp/pagination.html' with page=mcq%}
+{% endblock%}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% extends "testApp/base.html" %}
+{% block body_block %}
+<div class="container">
+  <h1>Online Exam Portal</h1>
+  <div class="jumbotron">
+    <h2 id='home'>Basic Instructions for Online Examinations:</h2>
+    <ul>
+      <li>The examination will comprise of Objective type Multiple Choice Questions (MCQs)</li>
+      <li>All questions are compulsory and each carries One mark.</li>
+      <li>The total number of questions, duration of examination, will be different based on
+           the course, the detail is available on your screen.
+      </li>
+      <li>The Subjects or topics covered in the exam will be as per the Syllabus.</li>
+      <li>There will be NO NEGATIVE MARKING for the wrong answers.</li>
+    </ul>
+    <button type="button" class="btn btn-primary btn-lg"> <a href="/c"> Start Exam <i class="fas fa-sign-in-alt"></i></a> </button>
+    
+    </div>
+</div>
+
+{% endblock %}
